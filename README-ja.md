@@ -46,8 +46,6 @@ URLConnection+TPTimeoutSync.m を利用したいプロジェクトへコピー
 TPURLConnectionDelegate.h とTPURLConnectionDelegate.m を元に
 delegate 内メソッドを実装してください。
 
-Cocoa Pod でインストールすることも可能です。
-
 USAGE
 --------------------
 

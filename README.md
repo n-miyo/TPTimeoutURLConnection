@@ -50,8 +50,6 @@ TPURLConnection.h and TPURLConnection.m files.  Then you
 should implement some methods for your delegate with seeing
 TPURLConnectionDelegate.h and TPURLConnectionDelegate.m.
 
-You can install them via Cocoa Pod.
-
 
 USAGE
 --------------------
