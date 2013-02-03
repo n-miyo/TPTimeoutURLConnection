@@ -201,7 +201,13 @@ didReceiveResponse:(NSURLResponse *)response
     [[NSError alloc]
       initWithDomain:NSURLErrorDomain
       code:NSURLErrorTimedOut
-      userInfo:@{NSLocalizedDescriptionKey:@"timed out"}];
+      userInfo:@{
+        NSLocalizedDescriptionKey:
+          @"The request timed out.",
+        NSURLErrorFailingURLErrorKey:
+          [[self.connection originalRequest] URL],
+        NSURLErrorFailingURLStringErrorKey:
+          [[[self.connection originalRequest] URL] absoluteString]}];
 }
 
 @end

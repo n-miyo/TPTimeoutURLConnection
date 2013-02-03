@@ -135,7 +135,13 @@
     [[NSError alloc]
       initWithDomain:NSURLErrorDomain
       code:NSURLErrorTimedOut
-      userInfo:@{NSLocalizedDescriptionKey:@"timed out"}];
+      userInfo:@{
+        NSLocalizedDescriptionKey:
+          @"The request timed out.",
+        NSURLErrorFailingURLErrorKey:
+          [[self originalRequest] URL],
+        NSURLErrorFailingURLStringErrorKey:
+          [[[self originalRequest] URL] absoluteString]}];
 
   void (^b)(void) = ^{
     [self.delegate connection:self didFailWithError:error];
